@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calcualtor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        main{
+            height: 100vh;
+            background-image: url(hero.jpg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .box{
+            margin: 5rem auto;
+            width: 450px;
+            min-height: 65vh;
+            border-radius: 5px;
+            background: #DC3545;
+            box-shadow: 0 1rem 2rem maroon; 
+        }
+        #btn{
+            display: block;
+            margin: 0 auto;
+        }
+        .result{
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <main>
+        <nav class="navbar bg-danger text-white py-3">
+            <div class="container">
+                <span class="h1 mx-auto">Tip Calculator</span>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="box container d-flex justify-content-center py-5 ">
+                <form class="form-group">
+                    <div class="input-group py-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Bill Amount</span>
+                        </div>
+                        <input type="number" name="bill" id="bill" class="form-control" placeholder= "0.0" required>
+                    </div>
+
+                    <div class="input-group py-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tip Percentage</span>
+                        </div>
+                        <input type="number" name="percentage" id="percentage" class="form-control" default="5" min="1" max="25" required>
+                    </div>
+
+                    <div class="input-group py-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Number of Person</span>
+                        </div>
+                        <input type="number" name="people" id="people" class="form-control" required>
+                    </div>
+
+                    <div class="input-group py-4 result">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Result </span>
+                        </div>
+                        <input type="number" name="result" id="result" class="form-control" min="1" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark btn-lg w-50" id="btn">Get Value</button>
+                    
+                </form>
+
+            </div>    
+        </div>
+
+
+    </main>
+
+</body>
+</html>
